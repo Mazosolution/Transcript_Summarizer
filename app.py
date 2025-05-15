@@ -57,7 +57,7 @@ def read_file_content(uploaded_file):
 def generate_interview_analysis(transcript_text, job_description, decision_levels):
     """Generate a structured analysis of the interview transcript using Gemini."""
     try:
-        model = genai.GenerativeModel('gemini-2.5-pro-exp-03-25')
+        model = genai.GenerativeModel('gemini-2.0-pro-exp-02-05')
     except Exception as e:
         st.error(f"Error creating Generative Model: {str(e)}.")
         return {"analysis": "Could not configure the AI model."}
