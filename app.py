@@ -58,7 +58,7 @@ def generate_interview_analysis(transcript_text, job_description, decision_level
     """Generate a structured analysis of the interview transcript using Gemini."""
     try:
         # Update to use the recommended model
-        model = genai.GenerativeModel('gemini-2.5-pro-preview-05-06')
+        model = genai.GenerativeModel('gemini-1.5-pro')
     except Exception as e:
         st.error(f"Error creating Generative Model: {str(e)}.")
         return {"analysis": "Could not configure the AI model."}
